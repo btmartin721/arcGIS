@@ -12,7 +12,8 @@ Finally, it validates that all layers have the same dimensions and cell sizes (a
 ### Usage: 
 ```raster2maxent.py [--ws path\to\workspace] [--fc path\to\featureClass] [optional_arguments...]```  
 
-```Required arguments:  
+```
+Required arguments:  
 
 -w, --ws [path\to\workspace]: Specify path to workspace containing raster files.  Uses windows paths. E.g., C:\Users\$USER\Desktop  
 -f, --fc [path\to\featureClass]: Specify path to feature class shapefile to clip to. E.g., C:\Users\$USER\Desktop\myFC.shp  
