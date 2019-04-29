@@ -1,5 +1,5 @@
 ##=========================================================================
-## Process Global Climate Model (GCM) data from worldclim.org
+## Process raster data and prepare it for use with MAXENT
 ## 
 ## Script written by Bradley T. Martin, University of Arkansas
 ## Please submit any bug reports to: Bradley Martin, btm002@email.uark.edu
