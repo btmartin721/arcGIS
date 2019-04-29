@@ -19,7 +19,7 @@ Required arguments:
 -w, --ws [path\to\workspace]: Specify path to workspace containing raster files.  Uses windows paths. E.g., C:\Users\$USER\Desktop  
 -f, --fc [path\to\featureClass]: Specify path to feature class shapefile to clip to. E.g., C:\Users\$USER\Desktop\myFC.shp  
 
-Optional Arguments:  
+Optional arguments:  
 -p, --pattern [STRING]: Specify a wildcard to subset certain raster files in the ws for analysis (default = None).  E.g., *wgs84.tiff  
 -d, --datum [STRING]: Set the datum for the geographic transformation during Project Raster (default = NAD_1983_To_WGS_1984_5)  
 -e, --epsg [INTEGER]: Set the spatial reference (epsg #) for the output coordinate system during Project Raster. Default = 4269 (NAD83)  
