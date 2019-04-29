@@ -178,7 +178,7 @@ def getRasterList(wildcard):
 	
 def parseArgs():
 	# Set command-line arguments.
-	parser = argparse.ArgumentParser(description="This is a Python2.7 script to process bioclim raster data")
+	parser = argparse.ArgumentParser(description="This is a Python2.7 script to prepare raster data for use with MAXENT")
 	
 	requiredArgs = parser.add_argument_group("Required arguments")
 	optionalArgs = parser.add_argument_group("Optional arguments")
