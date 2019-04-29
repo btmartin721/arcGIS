@@ -148,13 +148,13 @@ def reproject(rasters, epsg, datum, resamp, folder):
 				
 		# Project Raster tool.
 		arcpy.ProjectRaster_management(raster, 
-									outR, 
-									arcpy.SpatialReference(epsg), 
-									resamp, 
-									"#", 
-									datum, 
-									"#", 
-									"#")
+						outR, 
+						arcpy.SpatialReference(epsg), 
+						resamp, 
+						"#", 
+						datum, 
+						"#", 
+						"#")
 	
 	print "Done!\n\n"
 		
@@ -184,54 +184,54 @@ def parseArgs():
 	optionalArgs = parser.add_argument_group("Optional arguments")
 	
 	requiredArgs.add_argument("-w", "--ws",
-								required=True,
-								type=str,
-								help="Set the path to the workspace")
+					required=True,
+					type=str,
+					help="Set the path to the workspace")
 	requiredArgs.add_argument("-f", "--fc",
-								required=True,
-								type=str,
-								help="Specify feature class file (e.g., shapefile) to clip raster layers to")
+					required=True,
+					type=str,
+					help="Specify feature class file (e.g., shapefile) to clip raster layers to")
 								
 	optionalArgs.add_argument("-p", "--pattern",
-								required=False,
-								type=str,
-								default=None,
-								help="Specify search pattern for raster files in ws directory")
+					required=False,
+					type=str,
+					default=None,
+					help="Specify search pattern for raster files in ws directory")
 	optionalArgs.add_argument("-d", "--datum",
-								required=False,
-								type=str,
-								default="NAD_1983_To_WGS_1984_5",
-								help="Set the datum for the geographic transformation; default = NAD_1983_To_WGS_1984_5")
+					required=False,
+					type=str,
+					default="NAD_1983_To_WGS_1984_5",
+					help="Set the datum for the geographic transformation; default = NAD_1983_To_WGS_1984_5")
 	optionalArgs.add_argument("-e", "--epsg", 
-								required=False,
-								type=int,
-								default=4269,
-								help="Set the spatial reference (epsg #) for the output coordinate system; "
-								"default = 4269 (NAD83)")
+					required=False,
+					type=int,
+					default=4269,
+					help="Set the spatial reference (epsg #) for the output coordinate system; "
+					"default = 4269 (NAD83)")
 	optionalArgs.add_argument("-r", "--resampling",
-								required=False,
-								type=str,
-								default="CUBIC",
-								help="Set the resampling type. Options: [ NEAREST || BILINEAR || CUBIC || MAJORITY ] "
-								"default = CUBIC; CUBIC & BILINEAR are for conintuous data; others are for categorical")
+					required=False,
+					type=str,
+					default="CUBIC",
+					help="Set the resampling type. Options: [ NEAREST || BILINEAR || CUBIC || MAJORITY ] "
+					"default = CUBIC; CUBIC & BILINEAR are for conintuous data; others are for categorical")
 	optionalArgs.add_argument("-j", "--prj",
-								required=False,
-								type=str,
-								default="reprj",
-								help="Specify output directory for reprojected rasters")
+					required=False,
+					type=str,
+					default="reprj",
+					help="Specify output directory for reprojected rasters")
 	optionalArgs.add_argument("--reprj",
-								action="store_false",
-								default=True,
-								help="Boolean; Toggles off the Project Raster function")
+					action="store_false",
+					default=True,
+					help="Boolean; Toggles off the Project Raster function")
 	optionalArgs.add_argument("-c", "--clipped",
-								required=False,
-								type=str,
-								default="clipped",
-								help="Specify output directory for clipped rasters")
+					required=False,
+					type=str,
+					default="clipped",
+					help="Specify output directory for clipped rasters")
 	optionalArgs.add_argument("--clip_off",
-								action="store_false",
-								default=True,
-								help="Boolean; Toggles off clip raster function if used")
+					action="store_false",
+					default=True,
+					help="Boolean; Toggles off clip raster function if used")
 
 	a = parser.parse_args()
 	return a
