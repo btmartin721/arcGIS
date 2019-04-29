@@ -13,8 +13,9 @@ Finally, it validates that all layers have the same dimensions and cell sizes (a
 ```raster2maxent.py [--ws path\to\workspace] [--fc path\to\featureClass] [optional_arguments...]```  
 
 ```
-Required arguments:  
+python raster2maxent.py -h
 
+Required arguments:  
 -w, --ws [path\to\workspace]: Specify path to workspace containing raster files.  Uses windows paths. E.g., C:\Users\$USER\Desktop  
 -f, --fc [path\to\featureClass]: Specify path to feature class shapefile to clip to. E.g., C:\Users\$USER\Desktop\myFC.shp  
 
@@ -26,11 +27,17 @@ Optional Arguments:
 -j, --prj [path\to\outputPRJdir]: Set the output directory for reprojected raster layers (default = reprj)  
 -c, --clipped [path\to\outputClipped]: Specify output directory for clipped rasters (default = clipped). DON'T USE ABSOLUTE PATHS HERE!  
 --reprj BOOLEAN: Toggles off the Project Raster function. Toggle this if you don't want to reproject the raster layers.  
---clip_off BOOLEAN: Toggles off the clip raster function. For debugging/testing only.  
+--clip_off BOOLEAN: Toggles off the clip raster function. For debugging/testing only. 
+-h, --help BOOLEAN: Shows this help menu and exits.  
 ```  
 
 ### Dependencies  
 
-Must have ArcGIS 10 and the arcpy module installed.  
+```
+Python 2.7  
+Also must have ArcGIS 10 and the arcpy module installed.  
+```  
+
+
 
 
